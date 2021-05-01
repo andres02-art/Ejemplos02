@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Shooter Game</title>
+  <link type="text/css" rel="stylesheet" href="game.css">
+  <link rel="Manifest" href="./assets/files/Manifest.json">
+  <meta name="description" content="Un juego de disparos">
+  <meta name="theme-color" content="#eefa97">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <link rel="apple-touch-icon" href="/assets/files/iconos/Icono192x192.png">
+  <script src="Game.js" type="text/javascript"></script>
+  <script src="Entity.js" type="text/javascript"></script>
+  <script src="Character.js" type="text/javascript"></script>
+  <script src="Player.js" type="text/javascript"></script>
+  <script src="Opponent.js" type="text/javascript"></script>
+  <script src="Shot.js" type="text/javascript"></script>
+  <script src="main.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <button id="pause" class="gamebutton" onclick="this.blur();">Pausa</button>
+  <button id="reset" class="gamebutton" onclick="this.blur();">NUEVA PARTIDA</button>
+  <button id="installapps" aria-label="Instalador" hidden >instalar</button>
+  <script src="./assets/files/Install.js" text="type/javascript"></script>
+  <script src="./Service-worker.js" text="type/javascript"></script>
+  <script>
+    if (`serviceWorker` in navigator) {
+      window.addEventListener(`load`, ()=>{
+        navigator.serviceWorker.register(`service-worker.js`).then((reg)=>{
+          console.log(`Se ha registrado ${reg}, en el navegador`)
+        })
+      })
+    }
+  </script>
+</body>
+</html>
+
